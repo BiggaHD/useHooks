@@ -3,9 +3,9 @@ import React, { useState } from "react";
 const SearchBar = props => {
   const [term, setTerm] = useState("");
 
-  const onFormSubmit = event => {
-    event.preventDefault();
-    props.onSubmit(term);
+  const onFormSubmit = e => {
+    e.preventDefault();
+    props.submitCallback(term);
   };
 
   return (
